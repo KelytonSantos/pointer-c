@@ -12,18 +12,19 @@ int main(){
         return 1;
     }
 
+    printf("Digite 3 valores: \n");
     for(int i = 0; i < size; i++){
-        printf("Digite um valor: ");
-        scanf("%d", &ptr[i]);
-        printf("\n");
+        scanf("%d", ptr + i);
     }
 
-    printf("Os valores digitados foram: \n");
-    for(int i = 0; i < size; i++){
-        printf("%d \n", ptr[i]);
-    }
+    printf("valores escritos: \n");
+    for(int i; i < size; i++){
 
-    free(ptr);
+        printf("%d\n", *(ptr + i));
+    }
 
     return 0;
 }
+
+//&p[i] isso vai APONTAR para o primeiro endereço do meu array dinamico
+//scanf("%d", &p[i]);
